@@ -8,7 +8,6 @@ import static com.sparta.jh.controller.SortManager.newLogger;
 public class BubbleSort implements Sorter{
 
     public int[] sort(int[] intsArray){
-        newLogger.log(Level.INFO, "BubbleSort has sorted through the array");
         bubbleSort(intsArray);
         return (intsArray);
     }

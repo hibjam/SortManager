@@ -7,7 +7,6 @@ import static com.sparta.jh.controller.SortManager.newLogger;
 
 public class MergeSort implements Sorter {
     public int[] sort(int[] intsArray){
-        newLogger.log(Level.INFO, "MergeSort has sorted through the array");
         splitArray(intsArray);
         return (intsArray);
     }

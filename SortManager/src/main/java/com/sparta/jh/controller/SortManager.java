@@ -1,13 +1,8 @@
 package com.sparta.jh.controller;
 
-import com.sparta.jh.logging.CustomFilter;
-import com.sparta.jh.logging.CustomFormat;
 import com.sparta.jh.model.generatearray.CreateRandomArray;
 import com.sparta.jh.view.DisplayManager;
 
-import java.io.IOException;
-import java.util.logging.FileHandler;
-import java.util.logging.Handler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -53,7 +48,7 @@ public class SortManager {
 
 
         long start = System.nanoTime();
-        String sortedArray = ArrayInputInSorter.completeSort(userChosenSorter, intsArray);
+        String sortedArray = SortFactory.beginSort(userChosenSorter, intsArray);
         long end = System.nanoTime();
         newLogger.log(Level.INFO, "Time to complete the sort has been recorded");
 
