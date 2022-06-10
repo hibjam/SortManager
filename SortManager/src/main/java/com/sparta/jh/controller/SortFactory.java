@@ -13,15 +13,7 @@ import java.util.logging.Level;
 import static com.sparta.jh.controller.SortManager.newLogger;
 
 public class SortFactory {
-    public static String beginChosenSort(String choice, int[] arrayToSort){
-        try {
-            Sorter s = SortFactory.getSorter(choice);
-            return Arrays.toString(s.sort(arrayToSort));
-        }catch (IncorrectSelectException e){
-            System.out.println(e.getMessage());
-        }
-        return null;
-    }
+
     public static Sorter getSorter(String choice) throws IncorrectSelectException {
         switch (choice) {
             case "bubble":

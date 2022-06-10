@@ -1,5 +1,7 @@
 package com.sparta.jh.view;
 
+import com.sparta.jh.exceptions.IncorrectSelectException;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.Arrays;
@@ -7,6 +9,10 @@ import java.util.Scanner;
 
 public class DisplayManager {
     public DisplayManager(){}
+
+    public static void welcome(){
+        System.out.println("WELCOME TO THE SORT MANAGER!");
+    }
 
     public int selectArraySize() {
         int chosenArraySize;
@@ -22,7 +28,7 @@ public class DisplayManager {
         chosenArrayBound = scanner.nextInt();
         return chosenArrayBound;
     }
-    public String userSorter(){
+    public String userChooseSorter() {
         String chosenMethod = "";
         while (!chosenMethod.toLowerCase().equals("bubble") && !chosenMethod.toLowerCase().equals("binary")
                 && !chosenMethod.toLowerCase().equals("merge") && !chosenMethod.toLowerCase().equals("insertion")){

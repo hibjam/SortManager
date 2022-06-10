@@ -9,10 +9,10 @@ import static com.sparta.jh.controller.SortManager.newLogger;
 public class logConfiguration {
     public static void logger() {
         try {
-            Handler fileHandler = new FileHandler("src/main/java/com/sparta/jh/logging/sortManager.log", true);
-            newLogger.addHandler(fileHandler);
+            Handler newFileHandler = new FileHandler("src/main/java/com/sparta/jh/logging/logFile.log", true);
+            newLogger.addHandler(newFileHandler);
             newLogger.setFilter(new CustomFilter());
-            fileHandler.setFormatter(new CustomFormat());
+            newFileHandler.setFormatter(new CustomFormat());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

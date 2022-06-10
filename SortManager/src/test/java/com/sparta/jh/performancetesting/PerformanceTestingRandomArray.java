@@ -12,9 +12,8 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.Random;
-import java.util.function.DoubleToIntFunction;
 
-public class PerformanceTesting {
+public class PerformanceTestingRandomArray {
 
     private int[] clonedArray;
     private static int[] generatedArray;
@@ -73,4 +72,6 @@ public class PerformanceTesting {
         System.out.println("Insertion Sort: \n" + (end - start) + " nanoseconds" + "\n" + Arrays.toString(sortedArray));
     }
 }
+
+// assert throws
 
