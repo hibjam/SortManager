@@ -1,11 +1,13 @@
-package com.sparta.jh.model;
+package com.sparta.jh.model.bubblesort;
+
+import com.sparta.jh.model.Sorter;
 
 import java.util.Arrays;
 import java.util.logging.Level;
 
 import static com.sparta.jh.controller.SortManager.newLogger;
 
-public class BubbleSort implements Sorter{
+public class BubbleSort implements Sorter {
 
     public int[] sort(int[] intsArray){
         bubbleSort(intsArray);

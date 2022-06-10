@@ -1,6 +1,6 @@
-package com.sparta.jh;
+package com.sparta.jh.functiontesting;
 
-import com.sparta.jh.model.MergeSort;
+import com.sparta.jh.model.mergesort.MergeSort;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

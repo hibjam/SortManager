@@ -1,4 +1,6 @@
-package com.sparta.jh.model;
+package com.sparta.jh.model.mergesort;
+
+import com.sparta.jh.model.Sorter;
 
 import java.util.Arrays;
 import java.util.logging.Level;

@@ -1,8 +1,9 @@
 package com.sparta.jh.controller;
 
 import com.sparta.jh.exceptions.IncorrectSelectException;
-import com.sparta.jh.model.BubbleSort;
-import com.sparta.jh.model.MergeSort;
+import com.sparta.jh.model.bubblesort.BubbleSort;
+import com.sparta.jh.model.insertionsort.InsertionSort;
+import com.sparta.jh.model.mergesort.MergeSort;
 import com.sparta.jh.model.Sorter;
 import com.sparta.jh.model.binarysort.BinarySort;
 
@@ -12,7 +13,7 @@ import java.util.logging.Level;
 import static com.sparta.jh.controller.SortManager.newLogger;
 
 public class SortFactory {
-    public static String beginSort(String choice, int[] arrayToSort){
+    public static String beginChosenSort(String choice, int[] arrayToSort){
         try {
             Sorter s = SortFactory.getSorter(choice);
             return Arrays.toString(s.sort(arrayToSort));
@@ -29,6 +30,8 @@ public class SortFactory {
                 return new BinarySort();
             case "merge":
                 return new MergeSort();
+            case "insertion":
+                return new InsertionSort();
             default:
                 newLogger.log(Level.WARNING, "User has not entered a valid choice!");
                 throw new IncorrectSelectException("Not a valid sort method: " + choice);

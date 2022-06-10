@@ -3,11 +3,13 @@ package com.sparta.jh.controller;
 import com.sparta.jh.model.generatearray.CreateRandomArray;
 import com.sparta.jh.view.DisplayManager;
 
+import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class SortManager {
     int[] intsArray;
+    int[] arrayClone;
 
     public static Logger newLogger = Logger.getLogger("Sort Manager Logger");
 
@@ -39,23 +41,24 @@ public class SortManager {
 
         this.intsArray = randomArray.generateArray(chosenSize, chosenBound);
         newLogger.log(Level.INFO, "A random array has now been generated");
+        arrayClone = intsArray.clone();
         return intsArray;
     }
-    private DisplayManager getResultsAfterSort(int[] arrayToSort) {
+    private DisplayManager getResultsAfterSort(int[] intsArray) {
         DisplayManager userInput = new DisplayManager();
         String userChosenSorter = userInput.userSorter();
         newLogger.log(Level.INFO, "User has selected which sorting method they would like to use");
 
 
         long start = System.nanoTime();
-        String sortedArray = SortFactory.beginSort(userChosenSorter, intsArray);
+        String sortedArray = SortFactory.beginChosenSort(userChosenSorter, intsArray);
         long end = System.nanoTime();
         newLogger.log(Level.INFO, "Time to complete the sort has been recorded");
 
         String userFormat = userInput.resultsDisplay();
         if (userFormat.equalsIgnoreCase("yes")) {
             newLogger.log(Level.INFO, "User has chosen to view the arrays");
-            DisplayManager.fullResults(arrayToSort, start, sortedArray, end);
+            DisplayManager.fullResults(arrayClone, start, sortedArray, end);
             newLogger.log(Level.INFO, "Full results have been printed to the screen");
         } else {
             newLogger.log(Level.INFO, "User has chosen not to view the arrays");

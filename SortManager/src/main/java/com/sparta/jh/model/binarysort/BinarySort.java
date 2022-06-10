@@ -84,12 +84,10 @@ public class BinarySort implements BinaryTreeInterface, Sorter {
     }
     @Override
     public void addElement(final int element) {
-        //newLogger.log(Level.INFO, "Adding a single element to binary tree");
         addNodeToTree(rootNode, element);
     }
     @Override
     public void addElements(final int[] elements) {
-        newLogger.log(Level.INFO, "Adding multiple elements from random array to binary tree");
         for (int element : elements) {
             addNodeToTree(rootNode, element);
         }
@@ -108,14 +106,12 @@ public class BinarySort implements BinaryTreeInterface, Sorter {
             if (node.isLeftChildEmpty()) {
                 node.setLeftChild(new Node(element));
                 numberOfNodes++;
-                //newLogger.log(Level.INFO, "Added leftChild to Binary tree");
             } else {
                 addNodeToTree(node.getLeftChild(), element);
             }
         } else if (node.isRightChildEmpty()) {
             node.setRightChild(new Node(element));
             numberOfNodes++;
-            // newLogger.log(Level.INFO, "Added rightChild to Binary tree");
         } else {
             addNodeToTree(node.getRightChild(), element);
         }

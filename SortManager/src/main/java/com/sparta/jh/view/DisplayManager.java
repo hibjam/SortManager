@@ -1,5 +1,7 @@
 package com.sparta.jh.view;
 
+import java.awt.*;
+import java.awt.image.BufferedImage;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -22,11 +24,13 @@ public class DisplayManager {
     }
     public String userSorter(){
         String chosenMethod = "";
-        while (!chosenMethod.toLowerCase().equals("bubble") && !chosenMethod.toLowerCase().equals("binary") && !chosenMethod.toLowerCase().equals("merge")){
+        while (!chosenMethod.toLowerCase().equals("bubble") && !chosenMethod.toLowerCase().equals("binary")
+                && !chosenMethod.toLowerCase().equals("merge") && !chosenMethod.toLowerCase().equals("insertion")){
             System.out.println("Please enter the NAME of the sorting method you would like to choose:\n" +
                     "1. Binary\n" +
                     "2. Bubble\n" +
                     "3. Merge\n" +
+                    "4. Insertion\n" +
                     "or press x to exit");
             Scanner scanner = new Scanner(System.in);
             chosenMethod = scanner.next();
