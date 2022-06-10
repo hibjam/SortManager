@@ -18,7 +18,7 @@ public class SortManager {
     public static Logger newLogger = Logger.getLogger("Sort Manager Logger");
 
     public void sortManager() {
-        //logger();
+        logger();
         DisplayManager.welcome();
         int[] arrayToSort = getArrayBeforeSort();
         String compareAgain = "yes";
