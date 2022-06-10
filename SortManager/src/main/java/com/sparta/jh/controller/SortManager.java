@@ -18,7 +18,7 @@ public class SortManager {
     public static Logger newLogger = Logger.getLogger("Sort Manager Logger");
 
     public void sortManager() {
-        logger();
+       // logger();
         DisplayManager.welcome();
         int[] arrayToSort = getArrayBeforeSort();
         String compareAgain = "yes";
@@ -28,7 +28,7 @@ public class SortManager {
             if (compareAgain.equalsIgnoreCase("yes"))
                 newLogger.log(Level.INFO, "User has chosen to compare to another sorter");
             }
-        newLogger.log(Level.INFO, "Sort Manager has Finished");
+        newLogger.log(Level.INFO,"Sort Manager has Finished");
         }
 
     private int[] getArrayBeforeSort() {
@@ -53,6 +53,7 @@ public class SortManager {
         DisplayManager userInput = new DisplayManager();
         String userChosenSorter = userInput.userChooseSorter();
         newLogger.log(Level.INFO, "User has selected which sorting method they would like to use");
+        newLogger.log(Level.INFO, "User has chosen the " + userChosenSorter + " method");
 
         Sorter sorter;
         try {
@@ -65,7 +66,7 @@ public class SortManager {
         sorter.sort(intsArray);
         long end = System.nanoTime();
         String stringArray = Arrays.toString(sorter.sort(intsArray));
-        newLogger.log(Level.INFO, "Time to complete the sort has been recorded");
+        newLogger.log(Level.INFO, "The sort has been completed, time to complete the sort has been recorded");
 
         String userFormat = userInput.resultsDisplay();
         if (userFormat.equalsIgnoreCase("yes")) {
