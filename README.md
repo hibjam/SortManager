@@ -1,11 +1,11 @@
 # SortManager
 ## Contents
 <ol>
-<li><p><a href="https://github.com/hibjam/JavaProject#first-java-project" 
+<li><p><a href="https://github.com/hibjam/SortManager#project-summary" 
 title="Summary">Summary</a></p>
-<li><p><a href="https://github.com/hibjam/JavaProject/blob/main/readme.md#creating-a-bubblesort" 
+<li><p><a href="https://github.com/hibjam/SortManager#testing-dependencies" 
 title="Testing Dependencies">Testing Dependencies</a></p>
-<li><p><a href="https://github.com/hibjam/JavaProject/blob/main/readme.md#fibonacci-sequence" 
+<li><p><a href="https://github.com/hibjam/SortManager#phases-of-project-creation" 
 title="Phases">Phases of Project Creation</a></p></li>
 </ol>
 <hr />
