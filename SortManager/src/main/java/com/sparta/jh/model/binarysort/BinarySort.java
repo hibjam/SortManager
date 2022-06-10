@@ -73,6 +73,11 @@ public class BinarySort implements BinaryTreeInterface, Sorter {
         return tree.getSortedTreeAsc();
     }
 
+    public void binarySortTree(final int element){
+        BinarySort tree = new BinarySort();
+        rootNode = new Node(element);
+    }
+
     @Override
     public final int getRootElement() {
         return rootNode.getValue();
